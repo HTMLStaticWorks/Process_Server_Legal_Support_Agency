@@ -602,7 +602,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             draw() {
                 const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-                const color = isDark ? 'rgba(212, 175, 55, 0.35)' : 'rgba(197, 160, 89, 0.3)';
+                const color = isDark ? 'rgba(223, 195, 133, 0.35)' : 'rgba(178, 146, 85, 0.3)';
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.radius * this.z, 0, Math.PI * 2);
                 ctx.fillStyle = color;
@@ -626,7 +626,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            const lineColorBase = isDark ? '212, 175, 55' : '197, 160, 89';
+            const lineColorBase = isDark ? '223, 195, 133' : '178, 146, 85';
 
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {

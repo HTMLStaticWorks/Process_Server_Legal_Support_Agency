@@ -759,4 +759,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         cursorObserver.observe(document.body, { childList: true, subtree: true });
     }
+
+    // ==========================================
+    // 2026 LATEST MICRO-INTERACTIONS
+    // ==========================================
+
+    // 1. Magnetic Hover Animation for Buttons and Toggles
+    if (window.matchMedia('(pointer: fine)').matches) {
+        const magneticElements = document.querySelectorAll('.btn-premium, .btn-outline-premium, .navbar-brand, .back-to-top, #dark-mode-toggle, #rtl-toggle');
+        
+        magneticElements.forEach(el => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                
+                // Snaps the element subtly toward the mouse
+                const force = 0.22;
+                el.style.transform = `translate3d(${x * force}px, ${y * force}px, 0)`;
+                el.style.transition = 'transform 0.1s ease-out';
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                // Return smoothly to original layout spot
+                el.style.transform = 'translate3d(0, 0, 0)';
+                el.style.transition = 'transform 0.35s cubic-bezier(0.25, 1, 0.5, 1)';
+            });
+        });
+    }
+
+    // 2. Glassmorphic Card Spotlight Tracking
+    const spotlightCards = document.querySelectorAll('.custom-card, .dark-card, .light-card');
+    
+    spotlightCards.forEach(card => {
+        card.classList.add('spotlight-card');
+        
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
 });
+

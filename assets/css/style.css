@@ -1664,5 +1664,36 @@ body.use-custom-cursor .custom-cursor-active .custom-cursor-dot {
     text-shadow: none;
 }
 
+/* 6. Premium Glassmorphic Spotlight Border Glow (2026 Interaction) */
+.spotlight-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.8px;
+    background: radial-gradient(circle 140px at var(--mouse-x, -999px) var(--mouse-y, -999px), rgba(197, 160, 89, 0.45) 0%, rgba(197, 160, 89, 0.05) 50%, transparent 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+[data-theme="dark"] .spotlight-card::before {
+    background: radial-gradient(circle 140px at var(--mouse-x, -999px) var(--mouse-y, -999px), rgba(212, 175, 55, 0.35) 0%, rgba(212, 175, 55, 0.02) 60%, transparent 100%);
+}
+
+.spotlight-card:hover::before {
+    opacity: 1;
+}
+
+
 
 

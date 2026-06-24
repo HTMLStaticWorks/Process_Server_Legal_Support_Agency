@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aegis | Process Server & Legal Support Agency</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link class="favicon" rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="home-2">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-shield-check me-2"></i>AEGIS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button class="btn btn-sm btn-dark rounded-circle" id="dark-mode-toggle" title="Toggle Theme" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-premium rounded-circle" id="rtl-toggle" title="Toggle RTL/LTR" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-arrow-left-right"></i></button>
+                    <a href="contact.html" class="btn btn-sm btn-premium">Request Service</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section 2: Split Layout Refined -->
+    <section class="hero-section d-flex align-items-center" style="background: var(--bg-color); height: calc(100vh - 76px); min-height: 600px; padding: 20px 0; overflow: hidden;">
+        <!-- Background 3D Particles -->
+        <canvas class="particles-canvas"></canvas>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content text-center text-lg-start" data-aos="fade-right">
+                    <h1 class="display-2 mb-4">Timely Service of Process <br>For Critical Cases.</h1>
+                    <p class="lead mb-5 opacity-75">We specialize in fast legal support services, ensuring your complaints, subpoenas, and court orders are delivered securely and in full accordance with local civil codes.</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+                        <a href="#process" class="btn btn-premium btn-lg px-5">Our Process</a>
+                        <a href="contact.html" class="btn btn-outline-premium btn-lg px-5">Submit Request</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+                    <div class="position-relative">
+                        <div class="hero-image-frame p-2 rounded-4 border border-gold-subtle shadow-lg bg-dark">
+                            <img src="assets/images/home-2-hero.png" class="img-fluid rounded-4 w-100" alt="Legal Support Services">
+                        </div>
+                        <!-- Subtle decorative element -->
+                        <div class="position-absolute -top-10 -end-10 bg-gold rounded-circle opacity-10" style="width: 100px; height: 100px; filter: blur(50px);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Interactive Process Refined -->
+    <section id="process" class="py-5">
+        <div class="container py-lg-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 mb-3">Our Methodical Approach</h2>
+                    <p class="text-muted mb-5">A transparent, fully trackable workflow to ensure legal compliance.</p>
+                    <div class="method-visual-wrapper mb-5 rounded-4 overflow-hidden border border-gold-subtle shadow-lg bg-dark" data-aos="zoom-in">
+                        <img src="assets/images/methodical_strategy_visual.png" class="img-fluid w-100" alt="Operational Strategy" style="max-height: 380px; object-fit: cover; opacity: 0.8;">
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="p-4 text-center border border-gold-subtle rounded-3 h-100 bg-dark-card shadow-sm">
+                        <span class="display-6 fw-bold text-gold mb-3 d-block" style="color: var(--secondary-color);">01</span>
+                        <h5>Document Intake</h5>
+                        <p class="small text-muted mb-0">Legal papers are securely uploaded, cataloged, and audited for jurisdiction and target address details.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 text-center border border-gold-subtle rounded-3 h-100 bg-dark-card shadow-sm">
+                        <span class="display-6 fw-bold text-gold mb-3 d-block" style="color: var(--secondary-color);">02</span>
+                        <h5>Target Verification</h5>
+                        <p class="small text-muted mb-0">Our skip tracing unit verifies residency, active employment, and optimal hours of service.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 text-center border border-gold-subtle rounded-3 h-100 bg-dark-card shadow-sm">
+                        <span class="display-6 fw-bold text-gold mb-3 d-block" style="color: var(--secondary-color);">03</span>
+                        <h5>Field Dispatch</h5>
+                        <p class="small text-muted mb-0">Servers are dispatched locally to execute delivery using professional standards and strategies.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 text-center border border-gold-subtle rounded-3 h-100 bg-dark-card shadow-sm">
+                        <span class="display-6 fw-bold text-gold mb-3 d-block" style="color: var(--secondary-color);">04</span>
+                        <h5>Proof of Service</h5>
+                        <p class="small text-muted mb-0">A notarized affidavit is immediately generated and returned to the client and the court clerk.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. The Team - Discreet UI -->
+    <section class="py-5" style="background-color: var(--section-bg);">
+        <div class="container py-lg-5">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="display-5 mb-3">Licensed Process Server Network</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">Our active servers maintain high levels of operational security and legal knowledge, guaranteeing valid services.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="custom-card h-100 p-2">
+                        <div class="card-img-wrapper rounded-3">
+                            <img src="assets/images/agent-v.png" alt="Server V - Lead Process Server">
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="mb-1">Server V</h4>
+                            <p class="text-muted small mb-0">Certified Process Server - 18yr Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="custom-card h-100 p-2">
+                        <div class="card-img-wrapper rounded-3">
+                            <img src="assets/images/agent-e.png" alt="Analyst E - Skip Tracer">
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="mb-1">Analyst E</h4>
+                            <p class="text-muted small mb-0">Skip Tracing Specialist - Legal Intelligence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="custom-card h-100 p-2">
+                        <div class="card-img-wrapper rounded-3">
+                            <img src="assets/images/agent-r.png" alt="Server R - Field Operations">
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="mb-1">Server R</h4>
+                            <p class="text-muted small mb-0">Field Dispatch Coordinator - Special Services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Solved Case Highlights -->
+    <section class="py-5">
+        <div class="container py-lg-5">
+             <div class="text-center mb-5">
+                <h2 class="display-5 mb-3">Case Studies</h2>
+                <p class="text-muted">Successful delivery of high-stakes legal documentation</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="p-4 border-start border-4 border-gold bg-light-card" style="border-color: var(--secondary-color) !important;">
+                        <span class="text-muted small text-uppercase">Case #2281-R</span>
+                        <h4 class="my-2">Same-Day Subpoena Served</h4>
+                        <p class="text-muted mb-0">Located and served a key witness in an antitrust lawsuit within 4 hours of receipt, ensuring witness testimony was admitted into evidence.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 border-start border-4 border-gold bg-light-card" style="border-color: var(--secondary-color) !important;">
+                        <span class="text-muted small text-uppercase">Case #4019-S</span>
+                        <h4 class="my-2">Evasive Defendant Service</h4>
+                        <p class="text-muted mb-0">Utilized advanced database intelligence and civil observation to serve a summons to a defendant who had actively avoided other agencies for weeks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Quantum Forensics: High-Tech Overlay Layout (Rebranded to Digital Skip Tracing) -->
+    <section class="quantum-forensics-section py-5 overflow-hidden">
+        <div class="container py-lg-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-lg-2 forensics-visual">
+                    <div class="position-relative forensics-image-container">
+                        <div class="forensics-glow"></div>
+                        <img src="assets/images/quantum-forensics.png" alt="Digital Tracking Operations" class="img-fluid rounded-4 shadow-2xl forensics-main-img position-relative z-2">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1 forensics-content text-center text-lg-start">
+                    <div class="pe-lg-5">
+                        <span class="badge bg-gold-subtle text-gold mb-3 px-3 py-2 rounded-pill x-small fw-bold">01 // SKIP TRACING</span>
+                        <h2 class="display-3 mb-4 fw-bold">Locating Evasive <br>Defendants Fast.</h2>
+                        <p class="text-muted mb-5 lead">Our internal trace lab utilizes professional data networks, utilities audits, and license registration histories to extract current locations and active workplaces, enabling legal service of process.</p>
+                        
+                        <div class="row g-4 forensics-features">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3">
+                                    <div class="icon-box-sm bg-dark rounded-3 text-gold"><i class="bi bi-search"></i></div>
+                                    <span class="small fw-bold">Database Queries</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3">
+                                    <div class="icon-box-sm bg-dark rounded-3 text-gold"><i class="bi bi-geo-alt"></i></div>
+                                    <span class="small fw-bold">Address Verification</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3">
+                                    <div class="icon-box-sm bg-dark rounded-3 text-gold"><i class="bi bi-telephone"></i></div>
+                                    <span class="small fw-bold">Contact Matching</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3">
+                                    <div class="icon-box-sm bg-dark rounded-3 text-gold"><i class="bi bi-briefcase"></i></div>
+                                    <span class="small fw-bold">Employment Verification</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Global Operations: Dark Parallax Section -->
+    <section class="global-ops-section py-5 position-relative">
+        <div class="container py-lg-5">
+            <div class="global-ops-overlay"></div>
+            <div class="row position-relative z-2">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-3 fw-bold text-white mb-3">Statewide Serving. Nationwide Reach.</h2>
+                    <p class="lead text-white-50 mx-auto" style="max-width: 700px;">With a network of verified legal support agents across all counties and major metropolitan zones, Aegis executes services wherever they are needed.</p>
+                </div>
+            </div>
+            <div class="row position-relative z-2 g-4 mt-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="p-4 rounded-3 text-center ops-card">
+                        <i class="bi bi-map text-gold fs-1"></i>
+                        <h4 class="mt-3 text-white">Statewide Dispatch</h4>
+                        <p class="small text-white-50">Local certified servers available in every county court jurisdiction.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 rounded-3 text-center ops-card">
+                        <i class="bi bi-globe text-gold fs-1"></i>
+                        <h4 class="mt-3 text-white">Nationwide Forwarding</h4>
+                        <p class="small text-white-50">Out-of-state summonses managed with legal compliance across domestic jurisdictions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-block mb-4" href="index.html" id="footer-logo">
+                        <i class="bi bi-shield-check me-2"></i>AEGIS
+                    </a>
+                    <p class="text-muted mb-4">Aegis Process Server & Legal Support Agency provides licensed, bonded, and compliant document serving and skip tracing services for professionals.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="blog.html" class="footer-link">Insights</a></li>
+                        <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5 class="mb-4">Our Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="footer-link">Subpoena Serving</a></li>
+                        <li><a href="services.html" class="footer-link">Summons & Complaints</a></li>
+                        <li><a href="services.html" class="footer-link">Court Filings</a></li>
+                        <li><a href="services.html" class="footer-link">Document Retrieval</a></li>
+                        <li><a href="services.html" class="footer-link">Skip Tracing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-muted small">Stay informed about legal procedures and service updates.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-premium" type="button"><i class="bi bi-send"></i></button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted small mb-0">&copy; 2026 Aegis Legal Support. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-muted small me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted small">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

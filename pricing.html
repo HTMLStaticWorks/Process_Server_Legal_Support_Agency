@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Rush Calculator | Aegis Legal Support</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link class="favicon" rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-shield-check me-2"></i>AEGIS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button class="btn btn-sm btn-dark rounded-circle" id="dark-mode-toggle" title="Toggle Theme" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-premium rounded-circle" id="rtl-toggle" title="Toggle RTL/LTR" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-arrow-left-right"></i></button>
+                    <a href="contact.html" class="btn btn-sm btn-premium">Request Service</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="premium-page-header text-center" style="background-image: url('assets/images/pricing-header.png');">
+        <div class="premium-page-header-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <h1 class="display-3 mb-3">Flat-Rate Legal Support.</h1>
+                    <p class="lead mx-auto" style="max-width: 700px;">Transparent, flat-rate pricing based on service tier, location, and speed requirements. No hidden administration fees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Pricing Tiers -->
+    <section class="py-5">
+        <div class="container py-lg-5">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4">
+                    <div class="p-5 border rounded-4 text-center h-100 dark-card shadow-sm">
+                        <h4 class="mb-3">Standard Serve</h4>
+                        <p class="text-muted small">First attempt within 3-5 business days.</p>
+                        <h2 class="display-5 fw-bold mb-4">$75<span class="fs-6 fw-normal text-muted">/target</span></h2>
+                        <ul class="list-unstyled text-start mb-5 opacity-75">
+                            <li class="mb-2"><i class="bi bi-check2 text-gold me-2"></i> Up to 3 service attempts</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-gold me-2"></i> Real-time email updates</li>
+                            <li class="bi mb-2"><i class="bi bi-check2 text-gold me-2"></i> Electronic Proof of Service</li>
+                            <li class="mb-2 text-muted"><i class="bi bi-x text-danger me-2"></i> Notarized Affidavit (+$15)</li>
+                        </ul>
+                        <a href="contact.html?speed=standard" class="btn btn-outline-premium w-100 py-2">Select Standard</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="p-5 border rounded-4 text-center h-100 dark-card shadow-lg bg-white position-relative overflow-hidden" style="border-color: var(--secondary-color) !important;">
+                        <span class="position-absolute top-0 end-0 bg-gold text-white px-4 py-1 small" style="background-color: var(--secondary-color);">POPULAR</span>
+                        <h4 class="mb-3">Rush Serve</h4>
+                        <p class="text-muted small">First attempt within 24-48 hours.</p>
+                        <h2 class="display-5 fw-bold mb-4">$120<span class="fs-6 fw-normal text-muted">/target</span></h2>
+                        <ul class="list-unstyled text-start mb-5">
+                            <li class="mb-2"><i class="bi bi-check2 text-gold me-2"></i> Up to 4 service attempts</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-gold me-2"></i> Priority route dispatch</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-gold me-2"></i> Free Skip Trace review</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-gold me-2"></i> Notarized Affidavit included</li>
+                        </ul>
+                        <a href="contact.html?speed=rush" class="btn btn-premium w-100 py-2 shadow">Select Rush</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="p-5 border rounded-4 text-center h-100 dark-card shadow-sm">
+                        <h4 class="mb-3">Same-Day Serve</h4>
+                        <p class="text-muted small">First attempt within hours of intake.</p>
+                        <h2 class="display-5 fw-bold mb-4">$210<span class="fs-6 fw-normal text-muted">/target</span></h2>
+                        <ul class="list-unstyled text-start mb-5 opacity-75">
+                            <li class="mb-2"><i class="bi bi-check2 text-gold me-2"></i> Up to 5 service attempts</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-gold me-2"></i> Instant courier dispatch</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-gold me-2"></i> Direct text message updates</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-gold me-2"></i> Notarized Proof of Service</li>
+                        </ul>
+                        <a href="contact.html?speed=sameday" class="btn btn-outline-premium w-100 py-2">Select Same-Day</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rush Calculator Section -->
+    <section id="calculator" class="py-5" style="background-color: var(--section-bg);">
+        <div class="container py-lg-5">
+            <div class="text-center mb-5">
+                <h6 class="text-uppercase text-gold mb-3" style="color: var(--secondary-color); letter-spacing: 2px;">Fee Estimate</h6>
+                <h2 class="display-5">Interactive Service Fee Calculator</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Configure your parameters to calculate the estimated cost for service of process. Taxes and court fees are not included.</p>
+                <div class="mx-auto" style="width: 80px; height: 3px; background: var(--secondary-color);"></div>
+            </div>
+            
+            <div class="row g-5 align-items-stretch">
+                <!-- Calculator Inputs -->
+                <div class="col-lg-8">
+                    <div class="p-4 p-md-5 border rounded-4 bg-white shadow-sm dark-card h-100">
+                        <!-- Step 1: Service Type -->
+                        <div class="mb-5">
+                            <h5 class="mb-3"><i class="bi bi-file-earmark-text text-gold me-2"></i> 1. Select Service Type</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="calc-card-option active" data-type="service" data-value="subpoena" data-base="75">
+                                        <i class="bi bi-file-text fs-2 mb-2 d-block text-gold"></i>
+                                        <span class="fw-bold d-block">Subpoena</span>
+                                        <small class="text-muted">Witness or Records</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="calc-card-option" data-type="service" data-value="summons" data-base="85">
+                                        <i class="bi bi-file-earmark-person fs-2 mb-2 d-block text-gold"></i>
+                                        <span class="fw-bold d-block">Summons & Complaint</span>
+                                        <small class="text-muted">Civil Litigation</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="calc-card-option" data-type="service" data-value="filing" data-base="60">
+                                        <i class="bi bi-folder2-open fs-2 mb-2 d-block text-gold"></i>
+                                        <span class="fw-bold d-block">Court Filing</span>
+                                        <small class="text-muted">Physical or E-filing</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="calc-card-option" data-type="service" data-value="retrieval" data-base="55">
+                                        <i class="bi bi-journal-text fs-2 mb-2 d-block text-gold"></i>
+                                        <span class="fw-bold d-block">Doc Retrieval</span>
+                                        <small class="text-muted">Records Recovery</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="calc-card-option" data-type="service" data-value="skiptrace" data-base="95">
+                                        <i class="bi bi-search fs-2 mb-2 d-block text-gold"></i>
+                                        <span class="fw-bold d-block">Skip Tracing</span>
+                                        <small class="text-muted">Locating Defendant</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Speed / Turnaround -->
+                        <div class="mb-5">
+                            <h5 class="mb-3"><i class="bi bi-lightning text-gold me-2"></i> 2. Turnaround Time</h5>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="calc-card-option active" data-type="speed" data-value="standard" data-addon="0">
+                                        <i class="bi bi-calendar-event fs-3 mb-2 d-block text-gold"></i>
+                                        <span class="fw-bold d-block">Standard</span>
+                                        <small class="text-muted">First try 3-5 days</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="calc-card-option" data-type="speed" data-value="rush" data-addon="45">
+                                        <i class="bi bi-lightning-charge fs-3 mb-2 d-block text-gold"></i>
+                                        <span class="fw-bold d-block">Rush (+ $45)</span>
+                                        <small class="text-muted">First try 24-48 hrs</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="calc-card-option" data-type="speed" data-value="sameday" data-addon="90">
+                                        <i class="bi bi-fire fs-3 mb-2 d-block text-gold"></i>
+                                        <span class="fw-bold d-block">Same-Day (+ $90)</span>
+                                        <small class="text-muted">Immediate dispatch</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Zone / Distance -->
+                        <div class="mb-4">
+                            <h5 class="mb-3"><i class="bi bi-geo-alt text-gold me-2"></i> 3. Service Zone (Distance from Court House)</h5>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="calc-card-option active" data-type="zone" data-value="local" data-addon="0">
+                                        <span class="fw-bold d-block">Local Zone</span>
+                                        <small class="text-muted">Under 15 miles</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="calc-card-option" data-type="zone" data-value="extended" data-addon="25">
+                                        <span class="fw-bold d-block">Extended (+ $25)</span>
+                                        <small class="text-muted">15 to 30 miles</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="calc-card-option" data-type="zone" data-value="remote" data-addon="60">
+                                        <span class="fw-bold d-block">Remote (+ $60)</span>
+                                        <small class="text-muted">30 to 60 miles</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Attempts & Options -->
+                        <div>
+                            <h5 class="mb-3"><i class="bi bi-plus-circle text-gold me-2"></i> 4. Additional Options</h5>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="calcNotarize" data-addon="15">
+                                <label class="form-check-label text-muted" for="calcNotarize">
+                                    Add Notarized Proof of Service Affidavit (+ $15)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="calcExtraAttempts" data-addon="35">
+                                <label class="form-check-label text-muted" for="calcExtraAttempts">
+                                    Extend attempts to 6 runs total (+ $35)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculator Output sticky card -->
+                <div class="col-lg-4">
+                    <div class="calc-result-box dark-card h-100 d-flex flex-column justify-content-center">
+                        <h4 class="mb-4 text-gold" style="color: var(--secondary-color); font-size: 1.25rem; text-transform: uppercase; letter-spacing: 2px;">Estimated Fee</h4>
+                        <div class="calc-price-display" id="totalPrice">$75</div>
+                        <p class="text-muted small px-3 mb-4">This estimate is subject to target location confirmation and doc review.</p>
+                        
+                        <div class="mt-auto px-2">
+                            <hr class="my-4 opacity-10">
+                            <ul class="list-unstyled text-start small mb-4 opacity-75">
+                                <li class="d-flex justify-content-between mb-2"><span>Service Type:</span> <strong id="summaryServiceText" class="text-gold" style="color: var(--secondary-color);">Subpoena</strong></li>
+                                <li class="d-flex justify-content-between mb-2"><span>Turnaround Speed:</span> <strong id="summarySpeedText" class="text-gold" style="color: var(--secondary-color);">Standard</strong></li>
+                                <li class="d-flex justify-content-between mb-2"><span>Coverage Area:</span> <strong id="summaryZoneText" class="text-gold" style="color: var(--secondary-color);">Local Zone</strong></li>
+                                <li class="d-flex justify-content-between mb-2 mt-3 pt-2 border-top border-secondary-subtle"><span>Base Fee:</span> <span id="summaryBase">$75</span></li>
+                                <li class="d-flex justify-content-between mb-2"><span>Speed Premium:</span> <span id="summarySpeed">$0</span></li>
+                                <li class="d-flex justify-content-between mb-2"><span>Zone Premium:</span> <span id="summaryZone">$0</span></li>
+                                <li class="d-flex justify-content-between mb-2"><span>Add-ons:</span> <span id="summaryAddons">$0</span></li>
+                            </ul>
+                            <button id="bookCalculatedBtn" class="btn btn-premium w-100 py-3 shadow">Book Service Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Unique Section: Defensible Affidavits -->
+    <section class="investment-resolution py-5 overflow-hidden">
+        <div class="container py-lg-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="resolution-visual position-relative">
+                        <div class="resolution-glow"></div>
+                        <img src="assets/images/pricing-roi.png" alt="Affidavit of Service Ledger" class="img-fluid rounded-5 shadow-2xl position-relative z-2">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                    <div class="pe-lg-5">
+                        <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mb-3">
+                            <span class="dot-indicator"></span>
+                            <h6 class="text-gold fw-bold mb-0 text-uppercase tracking-wider">Precision Value</h6>
+                        </div>
+                        <h2 class="display-3 mb-4 fw-bold">Beyond the Delivery.</h2>
+                        <p class="text-muted mb-4 lead">Our flat-rate fees reflect licensed, background-checked process servers, geo-tagged mobile service attempts, and legally robust affidavits of service.</p>
+                        
+                        <div class="roi-features mt-5">
+                            <div class="d-flex flex-column align-items-center flex-lg-row align-items-lg-start gap-4 mb-4">
+                                <div class="roi-icon-box">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Legal Defense</h5>
+                                    <p class="small text-muted mb-0">Every service matches local statutes perfectly, preventing motions to quash or jurisdictional delays.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-center flex-lg-row align-items-lg-start gap-4">
+                                <div class="roi-icon-box">
+                                    <i class="bi bi-pin-map"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">GPS-Tracked Verification</h5>
+                                    <p class="small text-muted mb-0">Every attempt log includes coordinates, timestamps, and target descriptions for absolute audit transparency.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. What's Included -->
+    <section class="py-5" style="background-color: var(--section-bg);">
+        <div class="container text-center">
+            <h2 class="mb-5">In Every Service Package</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <i class="bi bi-envelope-check fs-1 text-gold mb-3" style="color: var(--secondary-color);"></i>
+                    <h5>Secure Intake</h5>
+                    <p class="text-muted small">All documents are processed and held inside encrypted digital databases.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-card-checklist fs-1 text-gold mb-3" style="color: var(--secondary-color);"></i>
+                    <h5>Meticulous Reporting</h5>
+                    <p class="text-muted small">Interactive updates are emailed following every field attempt.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-file-earmark-check fs-1 text-gold mb-3" style="color: var(--secondary-color);"></i>
+                    <h5>Quick Returns</h5>
+                    <p class="text-muted small">Affidavits of service are executed and scanned back to you immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Privacy Guarantee -->
+    <section class="py-5">
+        <div class="container">
+             <div class="p-5 theme-highlight-block rounded-4 text-center">
+                <h3 class="mb-4">Attorneys & Corporate Billing</h3>
+                <p class="opacity-75 mx-auto mb-4" style="max-width: 600px;">We offer monthly invoicing, retainer billing plans, and bulk pricing descriptors for high-volume law firms, corporate legal units, and property management systems.</p>
+                <div class="d-flex justify-content-center gap-4 fs-4 opacity-50">
+                    <i class="bi bi-credit-card"></i>
+                    <i class="bi bi-file-earmark-medical"></i>
+                    <i class="bi bi-wallet2"></i>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-block mb-4" href="index.html" id="footer-logo">
+                        <i class="bi bi-shield-check me-2"></i>AEGIS
+                    </a>
+                    <p class="text-muted mb-4">Aegis Process Server & Legal Support Agency provides licensed, bonded, and compliant document serving and skip tracing services for professionals.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="blog.html" class="footer-link">Insights</a></li>
+                        <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5 class="mb-4">Our Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="footer-link">Subpoena Serving</a></li>
+                        <li><a href="services.html" class="footer-link">Summons & Complaints</a></li>
+                        <li><a href="services.html" class="footer-link">Court Filings</a></li>
+                        <li><a href="services.html" class="footer-link">Document Retrieval</a></li>
+                        <li><a href="services.html" class="footer-link">Skip Tracing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-muted small">Stay informed about legal procedures and service updates.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-premium" type="button"><i class="bi bi-send"></i></button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted small mb-0">&copy; 2026 Aegis Legal Support. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-muted small me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted small">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

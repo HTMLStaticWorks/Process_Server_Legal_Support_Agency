@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Service Request | Aegis Legal Support</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link class="favicon" rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-shield-check me-2"></i>AEGIS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button class="btn btn-sm btn-dark rounded-circle" id="dark-mode-toggle" title="Toggle Theme" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-premium rounded-circle" id="rtl-toggle" title="Toggle RTL/LTR" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-arrow-left-right"></i></button>
+                    <a href="contact.html" class="btn btn-sm btn-premium">Request Service</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="premium-page-header text-center" style="background-image: url('assets/images/contact-header.png');">
+        <div class="premium-page-header-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <h1 class="display-3 mb-3">Secure Service Intake.</h1>
+                    <p class="lead mx-auto">Request service of process online. Upload legal documents securely using our encrypted file intake portal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Contact Form & Service Request -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Service Request Multi-step Form -->
+                <div class="col-lg-8">
+                    <div class="p-4 p-md-5 border rounded-4 bg-white shadow-sm dark-card">
+                        
+                        <!-- Step Indicator -->
+                        <div class="form-step-indicator">
+                            <div class="form-step-dot active" id="stepDot1">1</div>
+                            <div class="form-step-dot" id="stepDot2">2</div>
+                            <div class="form-step-dot" id="stepDot3">3</div>
+                            <div class="form-step-dot" id="stepDot4">4</div>
+                        </div>
+                        
+                        <form id="serviceRequestForm" novalidate>
+                            
+                            <!-- STEP 1: Service Type & Speed -->
+                            <div class="form-step-content active" id="stepContent1">
+                                <h4 class="mb-4">1. Service & Speed Selection</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Service Type</label>
+                                        <select class="form-select" id="formServiceType" required>
+                                            <option value="" disabled selected>Choose service type...</option>
+                                            <option value="subpoena">Subpoena (Witness/Records)</option>
+                                            <option value="summons">Summons & Complaint</option>
+                                            <option value="filing">Court Filing</option>
+                                            <option value="retrieval">Document Retrieval</option>
+                                            <option value="skiptrace">Skip Tracing & Locate</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Turnaround Speed</label>
+                                        <select class="form-select" id="formSpeed" required>
+                                            <option value="" disabled selected>Choose turnaround...</option>
+                                            <option value="standard">Standard (3-5 days)</option>
+                                            <option value="rush">Rush (24-48 hours)</option>
+                                            <option value="sameday">Same-Day (Immediate Dispatch)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Service Area Zone</label>
+                                        <select class="form-select" id="formZone" required>
+                                            <option value="" disabled selected>Choose zone...</option>
+                                            <option value="local">Local (Under 15 miles)</option>
+                                            <option value="extended">Extended (15-30 miles)</option>
+                                            <option value="remote">Remote (30-60 miles)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Affidavit Details</label>
+                                        <div class="pt-2">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="formNotarize">
+                                                <label class="form-check-label text-muted small" for="formNotarize">Requires Notarization</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 pt-3 text-end">
+                                    <button type="button" class="btn btn-premium px-4 next-step-btn" data-current="1">Continue to Client Info</button>
+                                </div>
+                            </div>
+                            
+                            <!-- STEP 2: Client Info -->
+                            <div class="form-step-content" id="stepContent2">
+                                <h4 class="mb-4">2. Client & Billing Information</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Law Firm / Company Name</label>
+                                        <input type="text" class="form-control" id="formFirmName" placeholder="e.g. Sterling & Associates" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Contact Name (Attorney/Assistant)</label>
+                                        <input type="text" class="form-control" id="formClientName" placeholder="John Doe" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Contact Email</label>
+                                        <input type="email" class="form-control" id="formEmail" placeholder="attorney@firm.com" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Phone Number</label>
+                                        <input type="tel" class="form-control" id="formPhone" placeholder="(555) 000-0000" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label fw-bold">Billing Address</label>
+                                        <input type="text" class="form-control" id="formBillingAddress" placeholder="Suite, Street Address, City, State, ZIP" required>
+                                    </div>
+                                </div>
+                                <div class="mt-4 pt-3 d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-premium px-4 prev-step-btn" data-current="2">Back</button>
+                                    <button type="button" class="btn btn-premium px-4 next-step-btn" data-current="2">Continue to Target Info</button>
+                                </div>
+                            </div>
+                            
+                            <!-- STEP 3: Target Recipient Info -->
+                            <div class="form-step-content" id="stepContent3">
+                                <h4 class="mb-4">3. Recipient / Target Details</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Recipient Full Name / Entity</label>
+                                        <input type="text" class="form-control" id="formTargetName" placeholder="Target individual or corporate name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Primary Serving Address</label>
+                                        <input type="text" class="form-control" id="formTargetAddress" placeholder="Residency or business address" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Employer / Alternate Address (Optional)</label>
+                                        <input type="text" class="form-control" id="formTargetAltAddress" placeholder="Active workplace address">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Target Description (Height, Weight, Hair, Age)</label>
+                                        <input type="text" class="form-control" id="formTargetDesc" placeholder="e.g. Male, 40s, 6'0\", Brown hair, brown eyes">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label fw-bold">Special Instructions or Evasive History</label>
+                                        <textarea class="form-control" id="formInstructions" rows="3" placeholder="e.g. Target is evasive, has aggressive dogs, gate code is #404, serve during mornings..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="mt-4 pt-3 d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-premium px-4 prev-step-btn" data-current="3">Back</button>
+                                    <button type="button" class="btn btn-premium px-4 next-step-btn" data-current="3">Continue to Document Upload</button>
+                                </div>
+                            </div>
+                            
+                            <!-- STEP 4: Document Upload & Terms -->
+                            <div class="form-step-content" id="stepContent4">
+                                <h4 class="mb-4">4. Document Intake & Authorization</h4>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold d-block">Legal Documents to be Served</label>
+                                    <!-- Drag Drop Zone -->
+                                    <div class="drag-drop-zone" id="fileDragZone">
+                                        <i class="bi bi-cloud-arrow-up drag-drop-icon"></i>
+                                        <h5>Drag & Drop Files Here</h5>
+                                        <p class="text-muted small">Supports PDFs, DOCX files up to 25MB (Summons, complaints, pleadings, subpoenas)</p>
+                                        <span class="btn btn-sm btn-outline-premium px-3">Browse Files</span>
+                                        <input type="file" id="formFileField" class="d-none" multiple accept=".pdf,.doc,.docx">
+                                    </div>
+                                    
+                                    <!-- Progress Bar -->
+                                    <div class="upload-progress-wrapper d-none" id="progressWrapper">
+                                        <div class="d-flex justify-content-between mb-1 small text-muted">
+                                            <span>Uploading documents...</span>
+                                            <span id="progressPercent">0%</span>
+                                        </div>
+                                        <div class="upload-progress-bar-bg">
+                                            <div class="upload-progress-bar" id="progressBar"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- File List -->
+                                    <div class="uploaded-files-list mt-3" id="fileListContainer"></div>
+                                </div>
+                                
+                                <div class="mb-4 pt-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="authCheck" required>
+                                        <label class="form-check-label small text-muted" for="authCheck">
+                                            I authorize Aegis Process Serving to execute attempts at the designated targets, and certify that these documents are legally issued by court orders.
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-4 pt-3 d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-premium px-4 prev-step-btn" data-current="4">Back</button>
+                                    <button type="submit" class="btn btn-premium px-5 py-2">Submit Service Request</button>
+                                </div>
+                            </div>
+                            
+                        </form>
+                        
+                        <!-- Success View Container -->
+                        <div class="d-none text-center py-4" id="formSuccessView">
+                            <i class="bi bi-check-circle display-1 text-gold mb-4" style="color: var(--secondary-color); animation: pulse-dot 2s infinite;"></i>
+                            <h2 class="display-5 mb-2">Request Processed Securely</h2>
+                            <p class="lead text-muted mb-4">Your intake has been verified. Our skip tracing and dispatch team has been assigned.</p>
+                            
+                            <div class="p-4 bg-light-card rounded-4 border mx-auto mb-5 text-start" style="max-width: 500px;">
+                                <h5 class="border-bottom pb-2 mb-3 text-gold" style="color: var(--secondary-color);"><i class="bi bi-receipt me-2"></i> Case Details</h5>
+                                <div class="row g-2 small">
+                                    <div class="col-6 fw-bold">Case Reference:</div>
+                                    <div class="col-6 text-end text-color" id="successCaseId">VLS-2026-9041</div>
+                                    <div class="col-6 fw-bold">Client:</div>
+                                    <div class="col-6 text-end text-color" id="successFirm">Sterling Law Partners</div>
+                                    <div class="col-6 fw-bold">Recipient:</div>
+                                    <div class="col-6 text-end text-color" id="successTarget">Richard Roe</div>
+                                    <div class="col-6 fw-bold">Service Type:</div>
+                                    <div class="col-6 text-end text-color" id="successService">Summons & Complaint</div>
+                                    <div class="col-6 fw-bold">Speed:</div>
+                                    <div class="col-6 text-end text-color" id="successSpeed">Rush (24-48 Hours)</div>
+                                    <div class="col-6 fw-bold border-top pt-2">Estimated Charge:</div>
+                                    <div class="col-6 text-end text-color border-top pt-2 fw-bold text-gold" id="successTotal">$135.00</div>
+                                </div>
+                            </div>
+                            
+                            <button onclick="window.location.reload();" class="btn btn-premium px-5">Submit Another Request</button>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Office Contact Info -->
+                <div class="col-lg-4 text-center text-lg-start">
+                    <div class="ps-lg-3">
+                        <h3 class="mb-4">Intake Department</h3>
+                        <p class="text-muted mb-5">Our dispatch desk operates 24/7. Standard service attempts are run Monday through Saturday during compliant daylight hours.</p>
+                        
+                        <div class="mb-4 d-flex flex-column align-items-center flex-lg-row align-items-lg-start">
+                            <i class="bi bi-geo-alt fs-4 text-gold mb-2 mb-lg-0 me-lg-3" style="color: var(--secondary-color);"></i>
+                            <div>
+                                <h6 class="mb-1">Corporate Address</h6>
+                                <p class="text-muted small mb-0">Suite 404, The Sterling Building<br>Main Street, Downtown District</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 d-flex flex-column align-items-center flex-lg-row align-items-lg-start">
+                            <i class="bi bi-envelope fs-4 text-gold mb-2 mb-lg-0 me-lg-3" style="color: var(--secondary-color);"></i>
+                            <div>
+                                <h6 class="mb-1">Secure Legal Operations Email</h6>
+                                <p class="text-muted small mb-0">ops@aegis-support.com<br>(Firms can submit files directly via secure PDF)</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 p-4 bg-light-card rounded-3 d-flex flex-column align-items-center flex-lg-row text-center text-lg-start">
+                            <i class="bi bi-info-circle fs-3 mb-2 mb-lg-0 me-lg-3 text-gold"></i>
+                            <p class="small text-muted mb-0"><strong>Emergency Orders:</strong> If your serve must be executed within 12 hours, please call our 24/7 hotline directly after uploading your files.</p>
+                        </div>
+
+                        <div class="mt-5 pt-4 border-top">
+                            <h6 class="text-uppercase small fw-bold mb-3 tracking-wider">Connect Discretely</h6>
+                            <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+                                <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section py-0">
+        <div class="container-fluid p-0">
+            <div class="map-container" style="height: 450px; position: relative; overflow: hidden;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.892095037142!2d77.6083311!3d12.9855562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sMG%20Road%20Bengaluru!5e0!3m2!1sen!2sin!4v1712915000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-block mb-4" href="index.html" id="footer-logo">
+                        <i class="bi bi-shield-check me-2"></i>AEGIS
+                    </a>
+                    <p class="text-muted mb-4">Aegis Process Server & Legal Support Agency provides licensed, bonded, and compliant document serving and skip tracing services for professionals.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="blog.html" class="footer-link">Insights</a></li>
+                        <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5 class="mb-4">Our Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="footer-link">Subpoena Serving</a></li>
+                        <li><a href="services.html" class="footer-link">Summons & Complaints</a></li>
+                        <li><a href="services.html" class="footer-link">Court Filings</a></li>
+                        <li><a href="services.html" class="footer-link">Document Retrieval</a></li>
+                        <li><a href="services.html" class="footer-link">Skip Tracing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-muted small">Stay informed about legal procedures and service updates.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-premium" type="button"><i class="bi bi-send"></i></button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted small mb-0">&copy; 2026 Aegis Legal Support. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-muted small me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted small">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

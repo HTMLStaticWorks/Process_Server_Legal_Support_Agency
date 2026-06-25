@@ -1694,6 +1694,19 @@ body.use-custom-cursor .custom-cursor-active .custom-cursor-dot {
     opacity: 1;
 }
 
+/* 1024px and Mobile View hero buttons stacking */
+@media (max-width: 1024px) {
+    .hero-action-buttons {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .hero-action-buttons .btn {
+        width: 100% !important;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
 
 
 
